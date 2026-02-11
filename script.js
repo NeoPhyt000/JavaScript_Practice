@@ -144,7 +144,7 @@
 //   console.log(star);
 // }
 
-for (i = 1; i <= 5; i++){
+for (i = 1; i <=4 ; i++){
   let output = "";
 
   for( j = 1; j <= i; j++){
