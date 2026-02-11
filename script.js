@@ -106,22 +106,49 @@
 // }
 
 //Digit Sum
-let number = 234141134;
-let sum = 0;
+// let number = 234141134;
+// let sum = 0;
 
-while( number > 0){
-    let lastDigit = number % 10;
-    sum = sum + lastDigit;
-    number = Math.floor(number / 10);
+// while( number > 0){
+//     let lastDigit = number % 10;
+//     sum = sum + lastDigit;
+//     number = Math.floor(number / 10);
+// }
+// console.log(sum);
+
+// let number = 132434;
+// let count = 0;
+
+// while( number > 0){
+//       count++;
+//       number = Math.floor(number/10);
+// }
+
+// console.log(count);
+
+// for ( i = 1; i <=5; i++){
+//   let star = "";
+
+//   for(let j = 1; j<= i; j++){
+//     star += "*";
+//   }
+//   console.log(star);
+// }
+
+// for ( i = 5; i >= 0; i--){
+//   let star = "";
+
+//   for(let j = 1; j <= i; j++){
+//     star += "*";
+//   }
+//   console.log(star);
+// }
+
+for (i = 1; i <= 5; i++){
+  let output = "";
+
+  for( j = 1; j <= i; j++){
+    output += j;
+  }
+  console.log(output);
 }
-console.log(sum);
-
-let num = 1234;
-let count = 0;
-
-while (num > 0) {
-  count++;
-  num = Math.floor(num / 10);
-}
-
-console.log(count); // 4
