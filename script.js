@@ -144,11 +144,25 @@
 //   console.log(star);
 // }
 
-for (i = 1; i <=4 ; i++){
-  let output = "";
+// for (i = 1; i <=4 ; i++){
+//   let output = "";
+
+//   for( j = 1; j <= i; j++){
+//     output += j;
+//   }
+//   console.log(output);
+// }
+
+for(let i = 1; i <= 5; i++){
+  let line = "";
+
+  for(s = 1; s <= 5 - i; s++){
+    line += " ";
+  }
 
   for( j = 1; j <= i; j++){
-    output += j;
+    line += "*";
   }
-  console.log(output);
+
+  console.log(line);
 }
