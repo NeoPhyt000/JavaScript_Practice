@@ -270,7 +270,11 @@
 
 // can you  assign a function to a variable and then call it? show how?
 
-let a = () => {
+// let a = () => {
 
-};
-console.log(a());
+// };
+// console.log(a());
+
+(function init(){
+    console.log("Intialization");
+})();
