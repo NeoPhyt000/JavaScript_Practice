@@ -275,6 +275,10 @@
 // };
 // console.log(a());
 
-(function init(){
-    console.log("Intialization");
-})();
+// What will be the output and why?
+
+greet();
+
+var greet = function(){
+    console.log("Hi!");
+};
