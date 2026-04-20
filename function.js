@@ -277,8 +277,65 @@
 
 // What will be the output and why?
 
-greet();
+// greet();
 
-var greet = function(){
-    console.log("Hi!");
-};
+// var greet = function(){
+//     console.log("Hi!");
+// };
+// this code will show error cause  Hoisting only support in function declaration not function expression/statement
+
+// Write a code to make BMI Calculator
+
+// function bmi(weight, height){
+//     return weight / (height * height);
+// }
+
+// console.log(bmi(77, 1.73).toFixed);
+
+// Create a reusable disount calculator(HOF)
+
+// function createDiscountCalculator(discountPercent){
+//     return function(price){
+//         const discount = price * (discountPercent / 100);
+//         return price - discount;
+//     }
+// }
+
+// const percentOff = createDiscountCalculator(20);
+// console.log(percentOff(560));
+
+import { useState } from "react";
+
+export default function DiscountApp() {
+  const [price, setPrice] = useState(0);
+  const [finalPrice, setFinalPrice] = useState(null);
+
+  // Create a reusable 20% discount calculator
+  const percentOff = createDiscountCalculator(20);
+
+  const handleCalculate = () => {
+    const result = percentOff(Number(price));
+    setFinalPrice(result);
+  };
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h2>Discount Calculator (20% Off)</h2>
+
+      <input
+        type="number"
+        placeholder="Enter price"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+      />
+
+      <button onClick={handleCalculate}>
+        Calculate
+      </button>
+
+      {finalPrice !== null && (
+        <h3>Final Price: {finalPrice}</h3>
+      )}
+    </div>
+  );
+}
