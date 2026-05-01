@@ -303,39 +303,38 @@
 
 // const percentOff = createDiscountCalculator(20);
 // console.log(percentOff(560));
+ 
+// function outer (){
+//     let count = 0;
+//     return function inner(){
+//         count++;
+//         console.log(count);
+//     };
+// }
 
-import { useState } from "react";
+// const fn = outer();
+// fn();
+// fn();
+// fn();
 
-export default function DiscountApp() {
-  const [price, setPrice] = useState(0);
-  const [finalPrice, setFinalPrice] = useState(null);
+// function createCounter (){
+//     let count = 0;
+//     return function counterValue(){
+//         count++;
+//         return count;
+//     };
+// }
 
-  // Create a reusable 20% discount calculator
-  const percentOff = createDiscountCalculator(20);
+// const counter = createCounter();
+// console.log(counter());
+// console.log(counter());
 
-  const handleCalculate = () => {
-    const result = percentOff(Number(price));
-    setFinalPrice(result);
-  };
 
-  return (
-    <div style={{ padding: "20px" }}>
-      <h2>Discount Calculator (20% Off)</h2>
+////////////////////Arrays//////////////////////////
 
-      <input
-        type="number"
-        placeholder="Enter price"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
+let arr = [1, 2, 3, 4, 5];
+let newArr = arr.sort(function(a, b){
+    return b - a;
+})
 
-      <button onClick={handleCalculate}>
-        Calculate
-      </button>
-
-      {finalPrice !== null && (
-        <h3>Final Price: {finalPrice}</h3>
-      )}
-    </div>
-  );
-}
+console.log(newArr);
