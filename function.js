@@ -332,9 +332,62 @@
 
 ////////////////////Arrays//////////////////////////
 
-let arr = [1, 2, 3, 4, 5];
-let newArr = arr.sort(function(a, b){
-    return b - a;
-})
+// let arr = [1, 2, 3, 4, 5];
+// let newArr = arr.sort(function(a, b){
+//     return b - a;
+// })
 
-console.log(newArr);
+// console.log(newArr);
+
+//////////// push() method
+// const numbers = [1, 2, 3, 4, 5];
+
+// console.log(numbers.push("6"));
+// console.log(numbers);
+
+//////// pop() method
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// numbers.pop();
+// console.log(numbers);
+
+/////// shift() method
+
+// let numbers = [1, 2, 3 , 4, 5];
+// console.log(numbers.shift());
+// console.log(numbers);
+
+
+/////// unshift() method
+
+// let numbers = [1, 2, 3 , 4, 5];
+// console.log(numbers.unshift(6, 7, 8));
+// console.log(numbers);
+
+////////////// splice() method
+
+let arr = [1, 2, 3, 4, 5];
+arr.splice(2, 2);
+console.log(arr);
+
+let arr1 = [1, 2, 3, 4, 5];
+arr1.splice(5, 0, 6, 7, 8);
+console.log(arr1);
+
+let arr2 = [1, 2, 3, 4, 5];
+arr2.splice(2, 3, 10, 11, 12);
+console.log(arr2);
+
+
+///// map() method
+
+// let numbers = [1, 2, 3 , 4, 5];
+
+// let newArr = numbers.map(function (num){
+//     return num * 2;
+// });
+
+// // let newArr = numbers.map(num => num * 2);
+
+// console.log(newArr);
