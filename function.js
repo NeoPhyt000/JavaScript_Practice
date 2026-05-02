@@ -381,11 +381,51 @@
 
 /////////// slice() method
 
-const animals = ["ant", "bison", "camel", "duck", "elephant"];
-console.log(animals.slice(3, 5));
-console.log(animals.slice(-3, -2));
-console.log(animals.slice());
-console.log(animals.slice(2, -1));
+// const animals = ["ant", "bison", "camel", "duck", "elephant"];
+// console.log(animals.slice(3, 5));
+// console.log(animals.slice(-3, -2));
+// console.log(animals.slice());
+// console.log(animals.slice(2, -1));
+
+////////////// reverse() method
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr.reverse());
+// console.log(arr.toReversed());
+
+//////////// sort() method
+// const months = ["March", "Jan", "Feb", "Dec"];
+// const newMonths = months.sort(function(a, b){
+//     return a - b;
+// });
+// console.log(newMonths);
+
+// const words = ["apple", "banana", "grape", "orange"];
+// const sortedWords = words.sort((a, b) => a.localeCompare(b));
+// console.log(sortedWords);
+
+// const words = ["Banana", "apple", "Cherry"];
+
+// const sortedWords = words.sort((a, b) =>
+//   a.toUpperCase().localeCompare(b.toUpperCase())
+// );
+
+// console.log(sortedWords);
+
+// const users = [
+//   { name: "Alice", age: 30 },
+//   { name: "Bob", age: 25 },
+//   { name: "Charlie", age: 35 }
+// ];
+
+// users.sort((a, b) => a.age - b.age);
+
+//////////// forEach() method
+
+// let arr = [ 11, 62, 3, 55, 47];
+// arr.forEach(function(val){
+//     console.log(val);
+// })
 
 // /// map() method
 
@@ -399,4 +439,60 @@ console.log(animals.slice(2, -1));
 
 // console.log(newArr);
 
+// const nums = [5, 2, 9, 1, 7];
+// const sortedNums = nums.sort(function(a, b){
+//     return b - a;
+// })
+// console.log(sortedNums);
 
+// const fruits = ["banana", "apple", "cherry"];
+// fruits.sort();
+// console.log(fruits);
+
+// const names = ["rahim", "Karim", "abdul", "Zahid"];
+// const sortNames = names.sort((a, b) =>{
+//     return a.localeCompare(b);
+// })
+// console.log(sortNames);
+
+// const words = ["apple", "kiwi", "banana", "fig"];
+
+// const sortedWords = words.sort((a, b) => a.length - b.length);
+// console.log(sortedWords);
+
+// const  num = ["10", "5", "20", "1"];
+// const sortedNum = num.sort((a, b) => a - b);
+// console.log(sortedNum);
+
+// const users = [
+//   { name: "A", age: 25 },
+//   { name: "B", age: 18 },
+//   { name: "C", age: 30 }
+// ];
+
+// const sortedUsers = users.sort((a, b) => a.age - b.age);
+// console.log(sortedUsers);
+
+// const users = [
+//   { name: "rahim" },
+//   { name: "Karim" },
+//   { name: "abdul" }
+// ];
+
+// const sortedUsers = users.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base'}));
+// console.log(sortedUsers);
+
+const users = [
+  { name: "A", age: 25 },
+  { name: "B", age: 25 },
+  { name: "C", age: 20 }
+];
+
+const sortedUsers = users.sort((a, b) => {
+    if (a.age !== b.age){
+        return a.age - b.age;
+    }
+    return a.name.localeCompare(b.name);
+
+});
+console.log(users);
