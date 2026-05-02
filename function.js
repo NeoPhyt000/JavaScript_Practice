@@ -420,23 +420,6 @@
 
 // users.sort((a, b) => a.age - b.age);
 
-//////////// forEach() method
-
-// let arr = [ 11, 62, 3, 55, 47];
-// arr.forEach(function(val){
-//     console.log(val);
-// })
-
-// /// map() method
-
-// let numbers = [1, 2, 3 , 4, 5];
-
-// let newArr = numbers.map(function (num){
-//     return num * 2;
-// });
-
-// // let newArr = numbers.map(num => num * 2);
-
 // console.log(newArr);
 
 // const nums = [5, 2, 9, 1, 7];
@@ -479,20 +462,128 @@
 //   { name: "abdul" }
 // ];
 
-// const sortedUsers = users.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base'}));
+// const sortedUsers = users.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: ''}));
 // console.log(sortedUsers);
 
-const users = [
-  { name: "A", age: 25 },
-  { name: "B", age: 25 },
-  { name: "C", age: 20 }
+// const users = [
+//   { name: "A", age: 25 },
+//   { name: "B", age: 25 },
+//   { name: "C", age: 20 }
+// ];
+
+// const sortedUsers = users.sort((a, b) => {
+//     if (a.age !== b.age){
+//         return a.age - b.age;
+//     }
+//     return a.name.localeCompare(b.name);
+
+// });
+// console.log(users);
+
+//////////// forEach() method
+
+// let arr = [ 11, 62, 3, 55, 47];
+// arr.forEach(function(val){
+//     console.log(val);
+// });
+
+// let sum = 0;
+// const nums = [1, 2, 3, 4];
+
+// let totalNum = nums.forEach(function(val){
+//     sum += val;
+// })
+// console.log(sum);
+
+// const nums = [5, 10, 15];
+// nums.forEach(function(val){
+//     console.log(val);
+// })
+
+// const names = ["rahim", "karim", "abdul"];
+// let printenName = names.forEach(function(name){
+//     console.log(name.toUpperCase());
+// });
+
+
+// const nums = [1, 2, 3, 4, 5, 6];
+// nums.forEach(num => {
+//       if(num % 2 === 0){
+//         console.log(num);
+//       }
+// })
+
+// const words = ["apple", "kiwi", "banana"];
+
+// let lengths = [];
+// words.forEach(word => {
+//     lengths.push(word.length);
+// })
+// console.log(lengths);
+
+// const flags = [true, false, true, true, false];
+// let trueCount = 0;
+// flags.forEach(flag => {
+//     if(flag === true){
+//         trueCount++;
+//     }
+// });
+// console.log(trueCount);
+
+// const users = [
+//   { name: "Rahim", age: 20 },
+//   { name: "Karim", age: 25 }
+// ];
+
+// users.forEach(user => {
+//     console.log(user.name);
+// });
+
+// const users = [
+//   { name: "A", age: 15 },
+//   { name: "B", age: 22 },
+//   { name: "C", age: 17 }
+// ];
+// let adult = [];
+// users.forEach(user => {
+//     if(user.age >= 18){
+//         adult.push(user.name);
+//     }
+// })
+// console.log(adult);
+
+// const products = [
+//   { name: "A", price: 100 },
+//   { name: "B", price: 200 },
+//   { name: "C", price: 300 }
+// ];
+// let sum = 0;
+// products.forEach(product => {
+//        sum += product.price;
+// });
+// console.log(sum);
+
+const products = [
+  { name: "A", price: 100 },
+  { name: "B", price: 200 }
 ];
 
-const sortedUsers = users.sort((a, b) => {
-    if (a.age !== b.age){
-        return a.age - b.age;
-    }
-    return a.name.localeCompare(b.name);
-
+let discountedPrice = [];
+products.forEach(product => {
+    discountedPrice.push({
+        name: product.name,
+        price: product.price * 0.9
+    })
 });
-console.log(users);
+console.log(discountedPrice);
+
+// /// map() method
+
+// let numbers = [1, 2, 3 , 4, 5];
+
+// let newArr = numbers.map(function (num){
+//     return num * 2;
+// });
+
+// // let newArr = numbers.map(num => num * 2);
+
