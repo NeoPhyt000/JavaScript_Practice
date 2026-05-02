@@ -339,48 +339,55 @@
 
 // console.log(newArr);
 
-//////////// push() method
+// ////////// push() method
 // const numbers = [1, 2, 3, 4, 5];
 
 // console.log(numbers.push("6"));
 // console.log(numbers);
 
-//////// pop() method
+// ////// pop() method
 
 // const numbers = [1, 2, 3, 4, 5];
 
 // numbers.pop();
 // console.log(numbers);
 
-/////// shift() method
+// ///// shift() method
 
 // let numbers = [1, 2, 3 , 4, 5];
 // console.log(numbers.shift());
 // console.log(numbers);
 
 
-/////// unshift() method
+// ///// unshift() method
 
 // let numbers = [1, 2, 3 , 4, 5];
 // console.log(numbers.unshift(6, 7, 8));
 // console.log(numbers);
 
-////////////// splice() method
+// //////////// splice() method
 
-let arr = [1, 2, 3, 4, 5];
-arr.splice(2, 2);
-console.log(arr);
+// let arr = [1, 2, 3, 4, 5];
+// arr.splice(2, 2); // Just splice method is used to remove the element from the array and it will return the removed element as output
+// console.log(arr); // Here 2 is the index where we want to start the operation and 2 is the number of element we want to remove from the array
 
-let arr1 = [1, 2, 3, 4, 5];
-arr1.splice(5, 0, 6, 7, 8);
-console.log(arr1);
+// let arr1 = [1, 2, 3, 4, 5];
+// arr1.splice(5, 0, 6, 7, 8);// Here splice method is used to add the element in the array and it will return empty array as output cause no element is removed from the array
+// console.log(arr1);// Here 5 is the index where we want to add the element and 0 is the number of element we want to remove from the array and 6, 7, 8 are the element we want to add in the array
 
-let arr2 = [1, 2, 3, 4, 5];
-arr2.splice(2, 3, 10, 11, 12);
-console.log(arr2);
+// let arr2 = [1, 2, 3, 4, 5];
+// arr2.splice(2, 3, 10, 11, 12);// Here splice method is used to remove the element from the array and add the element in the array at the same time and it will return the removed element as output
+// console.log(arr2);// Here 2 is the index where we want to start the operation and 3 is the number of element we want to remove from the array and 10, 11, 12 are the element we want to add in the array
 
+/////////// slice() method
 
-///// map() method
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+console.log(animals.slice(3, 5));
+console.log(animals.slice(-3, -2));
+console.log(animals.slice());
+console.log(animals.slice(2, -1));
+
+// /// map() method
 
 // let numbers = [1, 2, 3 , 4, 5];
 
@@ -391,3 +398,5 @@ console.log(arr2);
 // // let newArr = numbers.map(num => num * 2);
 
 // console.log(newArr);
+
+
