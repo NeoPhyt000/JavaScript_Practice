@@ -563,27 +563,90 @@
 // });
 // console.log(sum);
 
+// const products = [
+//   { name: "A", price: 100 },
+//   { name: "B", price: 200 }
+// ];
+
+// let discountedPrice = [];
+// products.forEach(product => {
+//     discountedPrice.push({
+//         name: product.name,
+//         price: product.price * 0.9
+//     })
+// });
+// console.log(discountedPrice);
+
+// /// map() method
+
+let numbers = [1, 2, 3 , 4,];
+
+let newArr = numbers.map(function (num){
+    return num * 2;
+});
+console.log(newArr);
+
+const names = ["rahim", "karim", "abdul"];
+let upperCaseNames = names.map((name) => name.toUpperCase());
+console.log(upperCaseNames);
+
+const words = ["apple", "kiwi", "banana"];
+let lengths = words.map((word) => word.length);
+console.log(lengths);
+
+const nums = [1, 2, 3];
+let strings = nums.map((num) => num.toString());
+console.log(strings);
+
+const nums = [2, 3, 4];
+let squares = nums.map((num) => num * num);
+console.log(squares);
+
+const flags = [true, false, true];
+let toggle = flags.map((flag) => !flag);
+console.log(toggle);
+
+const users = [
+  { name: "Rahim", age: 20 },
+  { name: "Karim", age: 25 }
+];
+let userNames = users.map((user) => user.name);
+console.log(userNames);
+
+const users = [
+  { name: "A", age: 20 },
+  { name: "B", age: 25 }
+];
+let userUpdateData = [];
+let userInfo = users.map((user) => {
+    userUpdateData.push({
+        name: user.name,
+        age: user.age + 1
+    })
+});
+console.log(userUpdateData);
+
 const products = [
   { name: "A", price: 100 },
   { name: "B", price: 200 }
 ];
+let discountedProducts = products.map((product) => ({
+    name: product.name,
+    price: product.price * 0.9
+}));
+console.log(discountedProducts);
 
-let discountedPrice = [];
-products.forEach(product => {
-    discountedPrice.push({
-        name: product.name,
-        price: product.price * 0.9
-    })
-});
-console.log(discountedPrice);
+const users = [
+  { first: "Rahim", last: "Khan" },
+  { first: "Karim", last: "Ali" }
+];
 
-// /// map() method
+let fullNames = users.map((user) => `${user.first} ${user.last}`);
+console.log(fullNames);
 
-// let numbers = [1, 2, 3 , 4, 5];
-
-// let newArr = numbers.map(function (num){
-//     return num * 2;
-// });
-
-// // let newArr = numbers.map(num => num * 2);
-
+const items = ["a", "b", "c"];
+let indexNum = items.map((item, index) => ({
+    value: item,
+    index: index
+}));
+console.log(indexNum);
