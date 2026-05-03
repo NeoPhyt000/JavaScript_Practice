@@ -579,74 +579,101 @@
 
 // /// map() method
 
-let numbers = [1, 2, 3 , 4,];
+// let numbers = [1, 2, 3 , 4,];
 
-let newArr = numbers.map(function (num){
-    return num * 2;
-});
-console.log(newArr);
+// let newArr = numbers.map(function (num){
+//     return num * 2;
+// });
+// console.log(newArr);
 
-const names = ["rahim", "karim", "abdul"];
-let upperCaseNames = names.map((name) => name.toUpperCase());
-console.log(upperCaseNames);
+// const names = ["rahim", "karim", "abdul"];
+// let upperCaseNames = names.map((name) => name.toUpperCase());
+// console.log(upperCaseNames);
 
-const words = ["apple", "kiwi", "banana"];
-let lengths = words.map((word) => word.length);
-console.log(lengths);
+// const words = ["apple", "kiwi", "banana"];
+// let lengths = words.map((word) => word.length);
+// console.log(lengths);
 
-const nums = [1, 2, 3];
-let strings = nums.map((num) => num.toString());
-console.log(strings);
+// const nums = [1, 2, 3];
+// let strings = nums.map((num) => num.toString());
+// console.log(strings);
 
-const nums = [2, 3, 4];
-let squares = nums.map((num) => num * num);
-console.log(squares);
+// const nums = [2, 3, 4];
+// let squares = nums.map((num) => num * num);
+// console.log(squares);
 
-const flags = [true, false, true];
-let toggle = flags.map((flag) => !flag);
-console.log(toggle);
+// const flags = [true, false, true];
+// let toggle = flags.map((flag) => !flag);
+// console.log(toggle);
+
+// const users = [
+//   { name: "Rahim", age: 20 },
+//   { name: "Karim", age: 25 }
+// ];
+// let userNames = users.map((user) => user.name);
+// console.log(userNames);
+
+// const users = [
+//   { name: "A", age: 20 },
+//   { name: "B", age: 25 }
+// ];
+// let userUpdateData = [];
+// let userInfo = users.map((user) => ({
+//         name: user.name,
+//         age: user.age + 1
+//     }));
+// console.log(userUpdateData);
+
+// const products = [
+//   { name: "A", price: 100 },
+//   { name: "B", price: 200 }
+// ];
+// let discountedProducts = products.map((product) => ({
+//     name: product.name,
+//     price: product.price * 0.9
+// }));
+// console.log(discountedProducts);
+
+// const users = [
+//   { first: "Rahim", last: "Khan" },
+//   { first: "Karim", last: "Ali" }
+// ];
+
+// let fullNames = users.map((user) => `${user.first} ${user.last}`);
+// console.log(fullNames);
+
+// const items = ["a", "b", "c"];
+// let indexNum = items.map((item, index, items) => ({
+//     value: item,
+//     index: index
+// }));
+// console.log(indexNum);
+
+/////// filter() method
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const evenNumbers = numbers.filter((num) => num % 2 === 0);
+// console.log(evenNumbers);
+
+// const users = [
+//     { name: "Alice", age: 22},
+//     { name: "Bob", age: 17},
+//     { name: "Charlie", age: 30}
+// ]
+
+// const adults = users.filter((user) => user.age >= 18);
+// console.log(adults);
+
+// const products = ["Laptop", "Phone", "Tablet", "Camera"];
+
+// const searchTerm = "ph"; 
+// const results = products.filter((item) => item.toLowerCase().includes(searchTerm.toLowerCase()));
+// console.log(results);
 
 const users = [
-  { name: "Rahim", age: 20 },
-  { name: "Karim", age: 25 }
-];
-let userNames = users.map((user) => user.name);
-console.log(userNames);
-
-const users = [
-  { name: "A", age: 20 },
-  { name: "B", age: 25 }
-];
-let userUpdateData = [];
-let userInfo = users.map((user) => {
-    userUpdateData.push({
-        name: user.name,
-        age: user.age + 1
-    })
-});
-console.log(userUpdateData);
-
-const products = [
-  { name: "A", price: 100 },
-  { name: "B", price: 200 }
-];
-let discountedProducts = products.map((product) => ({
-    name: product.name,
-    price: product.price * 0.9
-}));
-console.log(discountedProducts);
-
-const users = [
-  { first: "Rahim", last: "Khan" },
-  { first: "Karim", last: "Ali" }
+  { name: "John", active: true },
+  { name: "Jane", active: false },
+  { name: "Mike", active: true }
 ];
 
-let fullNames = users.map((user) => `${user.first} ${user.last}`);
-console.log(fullNames);
-
-const items = ["a", "b", "c"];
-let indexNum = items.map((item, index) => ({
-    value: item,
-    index: index
-}));
-console.log(indexNum);
+const activeUsers = users.filter((user) => user.active);
+console.log(activeUsers);
