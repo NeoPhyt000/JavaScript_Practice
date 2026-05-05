@@ -669,11 +669,105 @@
 // const results = products.filter((item) => item.toLowerCase().includes(searchTerm.toLowerCase()));
 // console.log(results);
 
-const users = [
-  { name: "John", active: true },
-  { name: "Jane", active: false },
-  { name: "Mike", active: true }
-];
+// const users = [
+//   { name: "John", active: true },
+//   { name: "Jane", active: false },
+//   { name: "Mike", active: true }
+// ];
 
-const activeUsers = users.filter((user) => user.active);
-console.log(activeUsers);
+// const activeUsers = users.filter((user) => user.active);
+// console.log(activeUsers);
+
+/////// reduce() method
+
+// let arr = [1, 2, 3, 4, 5, 6];
+
+// let ans = arr.reduce((acc, val ) => acc + val, 0);
+// console.log(ans);
+
+///////// find() method
+
+// const array = [5, 12, 8, 130, 44];
+// const fount = array.find((element) => element > 10);
+// console.log(fount);
+
+//// some() method
+
+// const arr = [10, 24, 39, 78, 43];
+// const find = arr.some((num) => num > 20);
+// console.log(find);
+
+/// every() method
+
+// const arr = [10, 24, 39, 78, 43];
+// const allGreaterThan20 = arr.every((num) => num >= 10);
+// console.log(allGreaterThan20);
+
+// const user = { name: "A" };
+// const extra = { age: 22 };
+
+// const merged = { ...user, ...extra };
+
+
+
+///////// Objects 
+
+// const person = {
+//     name: "Dibosh",
+//     Age: 24,
+//     isStudent: true
+// };
+
+// console.log(person.name);
+// console.log(person['Age']);
+// delete person.Age;
+// person.city = "Dhaka";
+// console.log(person);
+
+// object can store function as value
+
+// const user = {
+//     name: "Dibosh Sarker",
+//     age: 24,
+//     greet: function(){
+//         console.log("Hello");
+//     }
+// }
+// user.greet();
+
+// const user1 = {
+//     name: "Sarker",
+//     greet: function(){
+//         console.log("Hello " + this.name);
+//     }
+// }
+// user1.greet();
+
+//// Nested Object( object can contain other objects)
+
+// const student = {
+//     Name: "Dibosh",
+//     address: {
+//         city: "Dhaka", 
+//         country: "Bangladesh"
+//     }
+// };
+// console.log(student.address.city);
+
+// const car = {
+//     brand: "Toyota",
+//     mode: "Corolla",
+//     year: 2024,
+// };
+// console.log(car.brand);
+// car.color = "Red";
+// console.log(car);
+// car.year = 2025;
+// console.log(car);
+
+const users = [
+  { name: "Dibosh", age: 22 },
+  { name: "Rahim", age: 25 },
+  { name: "Karim", age: 30 }
+];
+console.log(users[0].name);
