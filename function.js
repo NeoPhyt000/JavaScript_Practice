@@ -724,7 +724,7 @@
 // person.city = "Dhaka";
 // console.log(person);
 
-// object can store function as value
+// //object can store function as value
 
 // const user = {
 //     name: "Dibosh Sarker",
@@ -743,7 +743,7 @@
 // }
 // user1.greet();
 
-//// Nested Object( object can contain other objects)
+// // Nested Object( object can contain other objects)
 
 // const student = {
 //     Name: "Dibosh",
@@ -765,9 +765,88 @@
 // car.year = 2025;
 // console.log(car);
 
-const users = [
-  { name: "Dibosh", age: 22 },
-  { name: "Rahim", age: 25 },
-  { name: "Karim", age: 30 }
-];
-console.log(users[0].name);
+// const users = [
+//   { name: "Dibosh", age: 22 },
+//   { name: "Rahim", age: 25 },
+//   { name: "Karim", age: 30 }
+// ];
+// console.log(users[0].name);
+
+//////// Object destructuring
+
+//  const user = {
+//    name: "Dibosh",
+//    age: 24, 
+//  };
+
+//// With destructuring we can extract the value from the object and assign it to a variable with the same name as the property of the object. It is a convenient way to extract values from objects and arrays.
+
+ const { name, age } = user;
+ console.log(name);
+ console.log(age);
+
+ // Rename Variable
+
+ const{ name: userName,} = user;
+ console.log(userName);
+
+ //// Default values
+
+const { country = "Bangladesh"} = user;
+console.log(country);
+console.log(user); 
+/////    for-in loop
+
+let obj = {
+  name: "Dibosh",
+  age: 24,
+  city: "Dhaka"
+};
+
+for(let key in obj){
+    console.log(key + ": " + obj[key]); 
+}
+
+let obj = {
+    name: "Trina",
+    age: 5,
+    email: "diboshsarker45@gmail.com",
+};
+//console.log(Object.keys(obj));
+//console.log(Object.entries(obj));
+//console.log(Object.values(obj));
+for (let [key, value] of Object.entries(obj)){
+  console.log(key, value);
+}
+
+let obj = {
+    name: "Dibosh",
+    age: 45,
+    email: "diboshsarker45@gmail.com",
+};
+
+let obj2 = {...obj, price: Infinity};
+console.log(obj2);
+
+let works = "None";
+let obj = {
+    name: "Dibosh",
+    age: 45,
+    email: "diboshsarker45@gmail.com",
+    address: {
+      city: "Dhaka",
+      country: "Bangladesh"
+    },
+    [works]: "Software Engineer"
+};
+let obj2 = {...obj};
+obj2.address.city = "Rajshahi";
+
+let obj2 = JSON.parse(JSON.stringify(obj));
+obj2.address.city = "Rajshahi";
+console.log(obj2);
+
+let obj2 = structuredClone(obj);
+obj2.address.city = "Rajshahi";
+console.log(obj2);
+console.log(obj);
