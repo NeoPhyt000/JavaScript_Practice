@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="box"></div>
+    <button onclick="showContent"> Show Content </button> -->
+
+
+    <!-- <script>
+        function showContent(){
+            document.getElementById("box").innerHTML = " <h2> Wolcome User </h2>";
+        }
+        showContent();
+
+    </script> -->
+
+    <!-- Get Attribute -->
+    <!-- <a href="https://google.com" id="google-link">Google</a>
+    <script>
+        let link = document.getElementById("google-link");
+        console.log(link.getAttribute("href"));
+    </script> -->
+
+    <!-- Set Attribute -->
+    <!-- <img id="image">
+    <script>
+        let image = document.getElementById("image");
+        image.setAttribute("src", "https://unsplash.com/photos/dramatic-sunset-over-a-vast-desert-landscape-2TvI1gfPRq8");
+        image.setAttribute("alt", "A beautiful sunset over a desert landscape");
+
+        // remove attribute
+        let removeImage = document.getElementById("image");
+        removeImage.removeAttribute("alt");
+        removeImage.removeAttribute("src");
+     
+    </script> -->
+     
+    <div id="container"></div>
+
+<script>
+    let container = document.getElementById("container");
+    let h1 = document.createElement("h1");
+    let p = document.createElement("p");
+    h1.innerText = "Hello, Dibosh!";
+    p.innerText = "Welcome to JavaScript DOM manipulation.";
+    container.appendChild(h1);
+    container.prepend(p);
+    console.log(container);
+    // let h2 = h1.remove();
+    let h3 = container.removeChild(container. lastChild);
+
+</script>
+
+</body>
+</body>
+</html>
