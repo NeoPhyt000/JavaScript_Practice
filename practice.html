@@ -39,7 +39,7 @@
      
     </script> -->
      
-    <div id="container"></div>
+    <!-- <div id="container"></div>
 
 <script>
     let container = document.getElementById("container");
@@ -52,6 +52,42 @@
     console.log(container);
     // let h2 = h1.remove();
     let h3 = container.removeChild(container. lastChild);
+
+</script> -->
+
+    <!-- <h1 id="title"> Hello</h1>
+
+<script>
+    let title = document.getElementById("title");
+    title.classList.add("active",);
+    // title.classList.remove("active");
+    // title.classList.toggle("active");
+    console.log(title.classList.contains("active")); -->
+    
+<!-- </script> -->
+
+<!-- Event & Event Listener -->
+    <!-- <h1 id = "title">Dibosh</h1> -->
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus impedit ab excepturi officiis dolor dolores corporis, inventore tenetur qui corrupti.</p>
+
+<script>
+    //let h1 = document.querySelector("#title");
+    // h1.addEventListener("click", function(){
+    // h1.style.color = "Green";
+    // console.log(h1);
+    // });
+    // let para = document.querySelector("p");
+    // para.addEventListener("dblclick", function(){
+    //     para.style.color = "red";
+    // });
+
+    // remove eventListener
+    let p = document.querySelector("p");
+    function dblclick(){
+        p.style.color = "red";
+    }
+    p.addEventListener("dblclick", dblclick);
+    p.removeEventListener("dblclick", dblclick);
 
 </script>
 
