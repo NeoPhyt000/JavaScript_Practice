@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body{
+            width: 100%;
+            height: 100%;
+            background-color: darkgrey;
+        }
+
+        input {
+            display: block;
+        }
+
+        #main{
+            padding: 50px;
+            width: 100%;
+            height: 100%;
+            background-color: darkgrey;
+        }
+
+        .card{
+            max-width: 300px;
+            margin-top: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #555;
+            
+        }
+
+        .profile{
+            width: 50px;
+            height: 50px;
+            color: white;
+            border-radius: 40% ;
+            margin-bottom: 7px;
+            overflow: hidden;
+        }
+
+        .profile img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        .card h5{
+            margin-top: 10px;
+        }
+
+        .card p{
+            font-size: 12px;
+            margin-top: 10px;
+        }
+</style>
+</head>
+<body>
+    <div id="main">
+        <form action="">
+        <input type="text" placeholder="Upload Image">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Occupation">
+        <input type="text" placeholder="Info">
+        <input type="submit">
+    </form>
+
+    <div class="card">
+        <div class="profile">
+            <img src="https://images.unsplash.com/photo-1773332598413-a6d5279d1ae8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <h3>Dibosh Sarker</h3>
+            <h5>Student</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores quas nihil maxime ullam harum provident nobis atque temporibus odit tempore.</p>
+    </div>
+    </div>
+    <script>
+        let form = document.querySelector("form");
+        let inputs = document.querySelectorAll("input");
+
+        form.addEventListener("submit", (details) => {
+            details.preventDefault();
+            
+        })
+    </script>
+
+</body>
+</html>
