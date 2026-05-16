@@ -851,3 +851,51 @@
 // console.log(obj2);
 // console.log(obj);
  
+var towSum = function(nums, target){
+   for(let i = 0; i < nums.length; i++){
+    for(j = i + 1; j< nums.length; j++){
+        if(nums[i] + nums[j] === target){
+            return[i, j];
+        }
+    }
+   } 
+};
+
+var romaToInt = function(s){
+    const roman = {
+    I:   1,
+    V:   5,
+    X :  10,
+    L :  50,
+    C :  100,
+    D :  500,
+    M :  1000,
+    };
+
+    let total = 0;
+
+    for( let i = 0; i < s.length; i++){
+        let current = roman[s[i]];
+        let next = roman[s[i + 1]];
+
+        if( current < next){
+            total -= current;
+        }
+        else{
+            total += current;
+        }
+    }
+    return total;
+}
+
+var longestCommonPrefix = function(strs){
+    let prefix = strs[0];
+
+    for(let i = 0; i < strs.length; i++){
+       if(strs[i].indexOf(prefix) !== 0 ){
+        prefix = prefix.slice(0, prefix.length -1);
+       }
+    }
+    
+    return prefix;
+}

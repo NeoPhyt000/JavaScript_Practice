@@ -68,7 +68,22 @@
 
 <!-- Event & Event Listener -->
     <!-- <h1 id = "title">Dibosh</h1> -->
-     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus impedit ab excepturi officiis dolor dolores corporis, inventore tenetur qui corrupti.</p>
+     <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus impedit ab excepturi officiis dolor dolores corporis, inventore tenetur qui corrupti.</p> -->
+    <!-- <input type="text" placeholder="name"> -->
+     <h3 id = "device">Select Your Device</h3>
+     <select>
+        <option selected disabled>Choose Your Device</option>
+        <option value="samsung">Samsung</option>
+        <option value="apple">Apple</option>
+        <option value="huawei">Huawei</option>
+        <option value="oppo">Oppo</option>
+     </select>
+
+<style>
+    h3{
+      text-transform: capitalize;  
+    }
+</style>
 
 <script>
     //let h1 = document.querySelector("#title");
@@ -82,13 +97,27 @@
     // });
 
     // remove eventListener
-    let p = document.querySelector("p");
-    function dblclick(){
-        p.style.color = "red";
-    }
-    p.addEventListener("dblclick", dblclick);
-    p.removeEventListener("dblclick", dblclick);
+    // let p = document.querySelector("p");
+    // function dblclick(){
+    //     p.style.color = "red";
+    // }
+    // p.addEventListener("dblclick", dblclick);
+    // p.removeEventListener("dblclick", dblclick);
 
+    // let input = document.querySelector("input");
+
+    // input.addEventListener("input", (dat) => {
+    //       if(dat.data !== null){
+    //         console.log(dat.data);
+    //       }
+    // });
+    //// Change Event //////////////////////////
+    let sel = document.querySelector("select");
+    let device = document.querySelector("#device");
+
+    sel.addEventListener("change", function(details){
+        device.textContent = `${details.target.value} Device Selected`;
+    })
 </script>
 
 </body>
