@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Apple</li>
+        <li>Guava</li>
+        <li>Pineapple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+    
+    <style>
+        .lt{
+            text-decoration: line-through;
+        }
+    </style>
+
+    <script>
+        let ul = document.querySelector("ul");
+        // ul.addEventListener("click", function(){
+        //     alert("clicked");
+        // });
+        ul.addEventListener("click", function(dets){
+            dets.target.classList.toggle("lt");
+        })
+    </script>
+</body>
+</html>
