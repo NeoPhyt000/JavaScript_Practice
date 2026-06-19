@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,4 +56,63 @@
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+
+        #main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: #999;
+        }
+
+        h1{
+            color: #887353;
+            font-size: 10rem;
+            font-weight: 500;
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="main">
+        <h1>A</h1>
+    </div>
+
+<script>
+    let h1 = document.querySelector("h1");
+
+    window.addEventListener("keydown", (details) => {
+        // h1.textContent = details.key;
+        if(details.key === " "){
+            h1.textContent =  "SPC"
+        } else{
+            h1.textContent = details.key;
+        }
+    })
+</script>
+
+</body>
+>>>>>>> dcc604648c3329e2f9ce63dbeee29dae68fb1739
 </html>
