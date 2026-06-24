@@ -6,28 +6,89 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
+    <!-- <ul>
         <li>Apple</li>
         <li>Guava</li>
         <li>Pineapple</li>
         <li>Banana</li>
         <li>Mango</li>
-    </ul>
-    
+    </ul> -->
+     <div class="a">
+        <div class="b">
+            <div class="c">
+                <button>Click me</button>
+            </div>
+        </div>
+     </div>
+
+
     <style>
-        .lt{
-            text-decoration: line-through;
+        /* .lt{
+            text-decoration: line-through; */
+        /* } */
+        *{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
         }
+        .a{
+            background-color: gold;
+            width: 80%;
+            height: 80%;
+        }
+
+        .b{
+            background-color: green;
+            width: 80%;
+            height: 80%;
+        }
+
+        .c{
+            background-color: magenta;
+            width: 80%;
+            height: 80%;
+        }
+
+        button{
+            padding: 10px;
+            height: 20%;
+            width: 20%;
+        }
+
     </style>
 
     <script>
-        let ul = document.querySelector("ul");
-        // ul.addEventListener("click", function(){
-        //     alert("clicked");
-        // });
-        ul.addEventListener("click", function(dets){
-            dets.target.classList.toggle("lt");
-        })
+        // let ul = document.querySelector("ul");
+        // // ul.addEventListener("click", function(){
+        // //     alert("clicked");
+        // // });
+        // ul.addEventListener("click", function(dets){
+        //     dets.target.classList.toggle("lt");
+        // })
+
+        let a = document.querySelector(".a");
+        let b = document.querySelector(".b");
+        let c = document.querySelector(".c");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", function(){
+            console.log("button clicked");
+        });
+
+        c.addEventListener("click", function(){
+            console.log("c clicked");
+        }, true);
+
+        b.addEventListener("click", function(){
+            console.log("b clicked");
+        });
+
+        a.addEventListener("click", function(){
+            console.log("a clicked");
+        }, true);
+
     </script>
 </body>
 </html>
