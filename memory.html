@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let user = {
+        //     name: "Dibosh",
+        //     age: "22"
+        // };
+        // localStorage.setItem("user", user); That is totally wrong in js cause if object is wrapped into {} and direclty insert into the setItem it will take as a string as a result it will return object object. solution is the use stringify first let's see in following
+        
+        // let user = {
+        //     name: "Trina",
+        //     age: 22
+        // };
+        // localStorage.setItem("user", JSON.stringify(user)); to retive the object from here must need to parse it first otherwise it will show undefined. cause browser only returns strings. it cann't give back you the plain text. 
+        
+        // let data = localStorage.getItem("user");
+        // let user = JSON.parse(data);
+        // console.log(user.name);
+
+        // localStorage.clear();
+        // localStorage.setItem("theme", "dark");
+
+        // let theme = localStorage.getItem("theme");
+        // if(theme === "dark"){
+        //     document.body.classList.add("dark");
+        // }
+
+        // sessionStorage.setItem("username", "Trina");
+        // sessionStorage.getItem("username");
+        // sessionStorage.removeItem("username");
+        // sessionStorage.clear();
+
+        document.cookie = "username = Dibosh";
+        document.cookie = "lastname = Trina";
+        document.cookie = "username = Sarker; expires = Thrusday, 26 june 2026 5:55:00 UTC";
+        document.cookie =
+"username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+
+
+    </script>
+</body>
+</html>
