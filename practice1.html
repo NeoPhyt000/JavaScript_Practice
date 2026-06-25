@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" placeholder="Write anytings">
+    <!-<input type="text" placeholder="Write anytings">
     <h1>Total Characters : <span>0</span></h1>
 
     <script>
@@ -15,6 +15,212 @@
 
         inp.addEventListener("input", function(){
             span.textContent = inp.value.length;
+        })
+    </script> -->
+
+    <!-- <script>
+        // setInterval(function(){
+        //     console.log("hello");
+        // }, 5000)
+
+        // setTimeout(function(){
+        //     console.log("hello");
+        // }, 5000)
+
+        // let st = setTimeout(function(){
+        //     console.log("hello");
+        // }, 5000);
+        // clearTimeout(st);
+
+        // let st = setTimeout(function(){
+        //     console.log("hello");
+        // }, 5000);
+        // clearInterval(st);
+
+        // let count = 10;
+
+        // let interval = setInterval(function(){
+        //     if( count >=1){
+        //         count--;
+        //         console.log(count);
+        //     }
+        //     else clearInterval(interval);
+        // }, 1000);
+
+        let count = 10;
+
+        let interval = setInterval(function(){
+            if( count >=0){
+                console.log(count);
+                count--;
+            }
+            else clearInterval(interval);
+        }, 1000);
+        
+
+    </script> -->
+<!-- </body>
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Simulation</title>
+    
+</head>
+<body>
+
+    <div class="card">
+        <h2>Download File</h2>
+
+        <div class="file-info">
+            <h4>JavaScript-Course.zip</h4>
+            <p>Size: 150 MB</p>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="status">
+            <span>0%</span>
+        </div>
+
+        <button id="downloadBtn">
+            Start Download
+        </button>
+    </div>
+
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+}
+
+.card{
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.2);
+
+    color:white;
+}
+
+.card h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.file-info{
+    margin-bottom:20px;
+}
+
+.file-info h4{
+    margin-bottom:5px;
+}
+
+.file-info p{
+    opacity:.8;
+}
+
+.progress-container{
+    width:100%;
+    height:14px;
+    border-radius:20px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.15);
+    margin-bottom:15px;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    border-radius:20px;
+
+    background:linear-gradient(
+        90deg,
+        #00f5a0,
+        #00d9f5
+    );
+}
+
+.status{
+    text-align:right;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.2);
+    color:white;
+
+    cursor:pointer;
+    font-size:16px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+button:hover{
+    background:rgba(255,255,255,0.3);
+    transform:translateY(-2px);
+}
+</style>
+    <script>
+        let btn = document.querySelector("#downloadBtn");
+        let progressBar = document.querySelector(".progress-bar")
+        let status = document.querySelector(".status span");
+
+        btn.addEventListener("click", function(){
+            let count = 0;
+
+            btn.disabled = true;
+            btn.textContent = "Downloading...";
+
+            let download = setInterval(() => {
+                count++;
+
+                progressBar.style.width = count + "%";
+                status.textContent = count + "%";
+
+                if(count === 100){
+                    clearInterval(download);
+
+                    status.textContent = "Download Complete";
+                    btn.textContent = "Downloaded";
+                }
+            }, 30);
         })
     </script>
 </body>
